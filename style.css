@@ -1,0 +1,92 @@
+:root {
+    --font-size-main: 64px;
+}
+
+#app {
+    display: flex;
+}
+
+main {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: Prototype, monospace;
+}
+
+aside {
+    width: 20%;
+}
+
+div.counter {
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;
+}
+
+button {
+    border: 0;
+    background: darksalmon none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+button.btn-main {
+    width: 60%;
+    font-size: var(--font-size-main);
+}
+
+button.btn-sub {
+    width: 15%;
+    font-size: calc(var(--font-size-main) / 3);
+}
+
+div.column {
+    display: flex;
+    flex-direction: column;
+}
+
+div.title,
+div.stats,
+div.income,
+div.statistic {
+    display: flex;
+    margin-bottom: 0.2rem;
+    justify-content: center;
+}
+
+div.title {
+    font-size: var(--font-size-main);
+    font-weight: 700;
+}
+
+div.stats > div > button {
+    width: 3rem;
+    font-size: calc(var(--font-size-main) / 2);
+}
+
+div.stats > input[type=number] {
+    width: 4rem;
+    font-size: var(--font-size-main);
+}
+
+div.income > input[type=number],
+div.income > button {
+    width: 2rem;
+    font-size: calc(var(--font-size-main) / 3);
+}
+
+div.income {
+    font-size: calc(var(--font-size-main) / 3);
+    align-items: baseline;
+}
+
+/* hide spin arrows */
+input::-webkit-inner-spin-button {
+    display: none; /* Chrome */
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+    text-align: center;
+}

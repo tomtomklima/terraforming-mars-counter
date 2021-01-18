@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>MARS counter</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="app">
+	<main>
+		<counter v-for="(counter, index) in counters" v-bind:counter="counter" v-bind:key="index"></counter>
+		<button class="btn-sub" v-on:click="reverseIncome">reverse income</button>
+		<button class="btn-sub" v-on:click="subtract8greens">build forest<br>(-8 trees)</button>
+		<button class="btn-main" v-on:click="doIncome">Income!</button>
+	</main>
+
+	<aside>
+		<b>Log:</b><br>
+		<span v-for="message in log.slice(0, 15)">
+			{{ (message.time.getMinutes() < 10 ? '0' : '') + message.time.getMinutes() }}:{{ (message.time.getSeconds() < 10 ? '0' : '') + message.time.getSeconds() }}
+			{{ message.text }}<br></span>
+	</aside>
+</div>
+<script src="vue.js"></script>
+</body>
+</html>
